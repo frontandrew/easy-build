@@ -1,4 +1,4 @@
-export function first(list) {
+export function first(list: any[]): any[] | undefined {
     if (!Array.isArray(list)) return undefined
 
     const length = list.length
