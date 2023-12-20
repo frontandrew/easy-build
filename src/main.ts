@@ -3,6 +3,8 @@ import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 
+import { range } from "../utils/mydash/range.ts"
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -22,3 +24,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+
+range(4); // => [0, 1, 2, 3] 
+range(-4); // => [0, -1, -2, -3]
+range(1, 5); // => [1, 2, 3, 4]
+range(0, 20, 5); // => [0, 5, 10, 15]
+range(0, -4, -1); // => [0, -1, -2, -3]
+range(1, 4, 0); // => [1, 1, 1]
+range(0); // => []
